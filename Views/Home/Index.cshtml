@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+    $( document ).ready(function() {
+        $('#myModal').on('shown.bs.modal',
+            function() {
+                $('#OpenModalBtn').trigger('focus');
+            });
+    });
+</script>
+
+
+@RenderPage("~/Views/Shared/_ModalExample.cshtml")
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Modal test</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+    </div>
+
+</div>
+
+
